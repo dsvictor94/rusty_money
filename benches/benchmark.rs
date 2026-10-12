@@ -36,11 +36,11 @@ fn bench_money_arithmetic(c: &mut Criterion) {
         });
 
         c.bench_function("money_ratio", |bencher| {
-            bencher.iter(|| black_box(a).ratio(black_box(b)))
+            bencher.iter(|| black_box(a).ratio(black_box(d)))
         });
 
         c.bench_function("money_ratio_exact", |bencher| {
-            bencher.iter(|| black_box(a).ratio(black_box(d)))
+            bencher.iter(|| black_box(a).ratio(black_box(b)))
         });
     }
 }
@@ -74,11 +74,11 @@ fn bench_fastmoney_arithmetic(c: &mut Criterion) {
         });
 
         c.bench_function("fastmoney_ratio", |bencher| {
-            bencher.iter(|| black_box(a).ratio(black_box(b)))
+            bencher.iter(|| black_box(a).ratio(black_box(d)))
         });
 
         c.bench_function("fastmoney_ratio_exact", |bencher| {
-            bencher.iter(|| black_box(a).ratio(black_box(d)))
+            bencher.iter(|| black_box(a).ratio(black_box(b)))
         });
     }
 }
